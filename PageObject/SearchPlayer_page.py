@@ -116,6 +116,6 @@ if __name__ == '__main__':
 
     sp = SearchPlayerPage(driver)
     # sp.click_homePage() # 点击首页
-    sp.click_PlayerManagement() # 点击玩家管理
+    sp.click_PlayerManagement()  # 点击玩家管理
     # sp.click_searchPlayer()
     time.sleep(30)
