@@ -18,7 +18,7 @@ from Util.WebDriverWaitUtil import ExplicitWait
 
 
 class SearchPlayerPage(BasePage):
-    # # 调用解析ini配置文件方法
+    # 调用解析ini配置文件方法
     par = ParseConfigFile()
     searchPlayerPage_Options = par.get_section("searchPlayer_page")
 
@@ -26,25 +26,20 @@ class SearchPlayerPage(BasePage):
     # 元素-首页
     lt_homepage, le_homepage = searchPlayerPage_Options["sp_page.homepage"].split(":")
     # print(lt_homepage, le_homepage)
-
     # 元素-玩家管理
     lt_player_management, le_player_management = searchPlayerPage_Options["sp_page.player_management"].split(":")
-
     # 元素-查询玩家
     lt_search_player, le_search_player = searchPlayerPage_Options["sp_page.search_player"].split(":")
-
     # 元素-输入玩家ID
     lt_input_playerID, le_input_playerID = searchPlayerPage_Options["sp_page.input_player_id"].split(":")
-
     # 元素-点击查询
     lt_search_button, le_search_button = searchPlayerPage_Options["sp_page.search_click"].split(":")
-
     # 元素-添加经验值输入框
     lt_input_exp, le_input_exp = searchPlayerPage_Options["sp_page.add_exp"].split(":")
-
     # 元素-点击增加按钮
     lt_add_exp_button, le_add_exp_button = searchPlayerPage_Options["sp_page.exp_button"].split(":")
 
+    # 拼接元素
     element_homePage = (lt_homepage, le_homepage)  # 首页
     element_player_management = (lt_player_management, le_player_management)  # 玩家管理
     element_search_player = (lt_search_player, le_search_player)  # 查询玩家
